@@ -1,3 +1,7 @@
-div .uifluidcontainer {
-	margin-top: 10px;
+div .column {
+	margin-top: 20px;
+}
+
+div .column h4 {
+	text-align: center;
 }
