@@ -5,96 +5,143 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="mycss.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 </head>
 <body>
 
-<div class="ui fluid container" id="form-top">
-	<div class="ui three column centered grid">
-		<div class="column">
+	<div class="ui fluid container" id="form-top">
+		<div class="ui two column centered grid">
+			<div class="column">
+				<div class="ui form" id="formulario">
+					<h4 class="ui diving header">Formulário</h4>
+					<hr>
 
-			<div class="ui form" id="formulario">
-				<h4 class="ui diving header">Formulário</h4>
-				<hr>
-
-				<!-- Field do Nome e Sobrenome-->
-				<div class="field">
-					<label>Nome</label>
-					<div class="two fields">
-						<div class="field">
-							<input type="text" name="novoNome" placeholder="Nome">
-						</div>
-						<div class="field">
-							<input type="text" name="novoSobrenome" placeholder="Sobrenome">
-						</div>
-					</div>
-				</div>
-
-				<!-- Field de Endereço-->
-				<div class="field">
-					<label>Endere&ccedilo</label>
-					<div class="fields">
-						<div class="twelve wide field">
-							<input type="text" name="endereco" placeholder="Rua">
-						</div>
-						<div class="four wide field">
-							<input type="text" name="numero" placeholder="Número">
-						</div>	
-					</div>
-				</div>
-
-				<!-- coninuação Field Endereço -->
-				<div class="field">
-					<div class="fields">
-						<div class="six wide field">
-							<input type="text" name="cidade" placeholder="Cidade">
-						</div>
-						<div class="three wide field">
-							<select class="ui fluid dropdown">
-								<option value="">Estado</option>
-								<option value="AC">Acre</option>
-								<option value="AL">Alagoas</option>
-								<option value="AP">Amapa</option>
-								<option value="AM">Amazonas</option>
-								<option value="BA">Bahia</option>
-								<option value="CE">Ceara</option>
-								<option value="DF">Destrito Federal</option>
-								<option value="ES">Espirito Santo</option>
-								<option value="GO">Goias</option>
-								<option value="MA">Maranhao</option>
-								<option value="MT">Mato Grosso</option>
-								<option value="MS">Mato Grosso do Sul</option>
-								<option value="MG">Minas Gerais</option>
-								<option value="PA">Para</option>
-								<option value="PB">Paraiba</option>
-								<option value="PR">Parana</option>
-								<option value="PE">Pernambuco</option>
-								<option value="PI">Piaui</option>
-								<option value="RJ">Rio de Janeiro</option>
-								<option value="RN">Rio Grande do Norte</option>
-								<option value="RS">Rio Grande do Sul</option>
-								<option value="RO">Rondonia</option>
-								<option value="RR">Roraima</option>
-								<option value="SC">Santa Catarina</option>
-								<option value="SP">Sao Paulo</option>
-								<option value="SE">Sergipe</option>
-								<option value="TO">Tocantins</option>
-							</select>
+					<!-- Field do Nome e Sobrenome-->
+					<div class="field">
+						<label>Dados Pessoais</label>
+						<div class="three fields">
+							<div class="field">
+								<input type="text" name="name" placeholder="Nome" id="name">
+									<div class="ui pointing red basic label" id="nomePointLabel">
+										No name has been typed
+									</div>
+							</div>
+							<div class="field">
+								<input type="text" name="sobrenome" placeholder="Sobrenome" id="lastName">
+									<div class="ui pointing red basic label" id="sobrenomePointLabel">
+										No last name has been typed
+									</div>
+							</div>
+							<div class="field">
+								<select name="gender" class="ui fluid dropdown">
+									<option value="">Sexo</option>
+									<option value="male">Masculino</option>
+									<option value="female">Feminino</option>
+								</select>
+							</div>
 						</div>
 					</div>
-				</div>
 
+					<!-- Field de Endereço-->
+					<div class="field">
+						<div class="fields">
+							<div class="twelve wide field">
+								<input type="text" name="endereco" placeholder="Rua">
+							</div>
+							<div class="four wide field">
+								<input type="text" name="numero" placeholder="Número">
+							</div>
+						</div>
+					</div>
+
+					<!-- coninuação Field Endereço || Provavelmente é possível melhorar isso com Jquery/AngularJS-->
+					<div class="field">
+						<div class="fields">
+							<div class="nine wide field">
+								<input type="text" name="cidade" placeholder="Cidade">
+							</div>
+							<div class="three wide field">
+								<select class="ui fluid dropdown">
+									<option value="">Estado</option>
+									<option value="AC">Acre</option>
+									<option value="AL">Alagoas</option>
+									<option value="AP">Amapá</option>
+									<option value="AM">Amazonas</option>
+									<option value="BA">Bahia</option>
+									<option value="CE">Ceará</option>
+									<option value="DF">Destrito Federal</option>
+									<option value="ES">Espirito Santo</option>
+									<option value="GO">Goiás</option>
+									<option value="MA">Maranhão</option>
+									<option value="MT">Mato Grosso</option>
+									<option value="MS">Mato Grosso do Sul</option>
+									<option value="MG">Minas Gerais</option>
+									<option value="PA">Pará</option>
+									<option value="PB">Paraiba</option>
+									<option value="PR">Parana</option>
+									<option value="PE">Pernambuco</option>
+									<option value="PI">Piauí</option>
+									<option value="RJ">Rio de Janeiro</option>
+									<option value="RN">Rio Grande do Norte</option>
+									<option value="RS">Rio Grande do Sul</option>
+									<option value="RO">Rondônia</option>
+									<option value="RR">Roraima</option>
+									<option value="SC">Santa Catarina</option>
+									<option value="SP">São Paulo</option>
+									<option value="SE">Sergipe</option>
+									<option value="TO">Tocantins</option>
+								</select>
+							</div>
+							<div class="four wide field">
+								<select class="ui fluid dropdown">
+									<option value="">País</option>
+									<option value="US">Estados Unidos</option>
+									<option value="BR">Brasil</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="field">
+						<label>Dados de Login</label>
+						<div class="three fields">
+							<div class="field">
+								<input type="email" name="email" placeholder="Email" id="inMail">
+								<div class="ui pointing red basic label" id="emailPointLabel">
+									Please enter your email
+								</div>
+							</div>
+							<div class="field">
+								<input type="email" name="emailConfirmation" placeholder="Confirmar email" id="confMail">
+								<div class="ui pointing red basic label" id="confirmaEmailPointLabel">
+									Please confirm your email
+								</div>
+							</div>
+							<div class="field">
+								<input type="password" name="password" placeholder="Password">
+							</div>
+						</div>
+					</div>
+					<hr>
+
+					<!-- Botões para enviar ou limpar o formulário -->
+					<div class="endBtn">
+						<div class="ui buttons">
+							<button class="ui blue button" id="submitBtn">Submit</button>
+							<div class="or"></div>
+							<button class="ui button" id="clearBtn">Clear</button>
+						</div>
+					</div>
+
+					<!-- fim do formulário -->
+				</div>
+				<!-- fim do formulário -->
 
 			</div>
-
 		</div>
 	</div>
-</div>
 
 
-
-
-
-
-<script src="semantic/dist/semantic.min.js"></script>
+	<script src="semantic/dist/semantic.min.js"></script>
+	<script type="text/javascript" src="myjs.js"></script>
 </body>
 </html>

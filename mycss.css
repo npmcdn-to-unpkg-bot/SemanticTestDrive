@@ -1,7 +1,21 @@
 div .column {
 	margin-top: 20px;
 }
-
+/*
 div .column h4 {
+	text-align: center;
+}
+*/
+/*div .form-btn {
+	text-align: center;
+}
+*/
+
+/*div #vertical-lign {
+	margin-top: 160px;
+	height: 30px;
+}*/
+
+div .endBtn {
 	text-align: center;
 }
