@@ -19,3 +19,8 @@ div .column h4 {
 div .endBtn {
 	text-align: center;
 }
+
+div .item img {
+	width: 100px;
+	height: 20px;
+}
